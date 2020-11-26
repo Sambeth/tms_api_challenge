@@ -1,0 +1,94 @@
+# packages in environment at /home/sambeth/anaconda3/envs/andela-mysql:
+#
+# Name                    Version                   Build  Channel
+_libgcc_mutex             0.1                        main  
+argon2-cffi               20.1.0           py37h4abf009_2    conda-forge
+async_generator           1.10                       py_0    conda-forge
+attrs                     20.3.0             pyhd3deb0d_0    conda-forge
+backports                 1.0                        py_2    conda-forge
+backports.functools_lru_cache 1.6.1                      py_0    conda-forge
+bleach                    3.2.1              pyh9f0ad1d_0    conda-forge
+brotlipy                  0.7.0           py37hb5d75c8_1001    conda-forge
+ca-certificates           2020.10.14                    0  
+certifi                   2020.11.8        py37h06a4308_0  
+cffi                      1.14.3           py37h261ae71_2  
+chardet                   3.0.4           py37he5f6b98_1008    conda-forge
+configparser              5.0.1                    pypi_0    pypi
+cryptography              3.2.1            py37hc72a4ac_0    conda-forge
+decorator                 4.4.2                      py_0    conda-forge
+defusedxml                0.6.0                      py_0    conda-forge
+entrypoints               0.3             pyhd8ed1ab_1003    conda-forge
+idna                      2.10               pyh9f0ad1d_0    conda-forge
+importlib-metadata        3.1.0              pyhd8ed1ab_0    conda-forge
+importlib_metadata        3.1.0                hd8ed1ab_0    conda-forge
+ipykernel                 5.3.4            py37h888b3d9_1    conda-forge
+ipython                   5.8.0                    py37_1    conda-forge
+ipython_genutils          0.2.0                      py_1    conda-forge
+jinja2                    2.11.2             pyh9f0ad1d_0    conda-forge
+json5                     0.9.5              pyh9f0ad1d_0    conda-forge
+jsonschema                3.2.0                      py_2    conda-forge
+jupyter_client            6.1.7                      py_0    conda-forge
+jupyter_core              4.7.0            py37h89c1867_0    conda-forge
+jupyterlab                2.2.9                      py_0    conda-forge
+jupyterlab_pygments       0.1.2              pyh9f0ad1d_0    conda-forge
+jupyterlab_server         1.2.0                      py_0    conda-forge
+ld_impl_linux-64          2.33.1               h53a641e_7  
+libedit                   3.1.20191231         h14c3975_1  
+libffi                    3.3                  he6710b0_2  
+libgcc-ng                 9.1.0                hdf63c60_0  
+libsodium                 1.0.18               h36c2ea0_1    conda-forge
+libstdcxx-ng              9.1.0                hdf63c60_0  
+markupsafe                1.1.1            py37hb5d75c8_2    conda-forge
+mistune                   0.8.4           py37h4abf009_1002    conda-forge
+mysqlclient               2.0.1                    pypi_0    pypi
+nbclient                  0.5.1                      py_0    conda-forge
+nbconvert                 6.0.7            py37h89c1867_3    conda-forge
+nbformat                  5.0.8                      py_0    conda-forge
+nbimporter                0.3.3                    pypi_0    pypi
+ncurses                   6.2                  he6710b0_1  
+nest-asyncio              1.4.3              pyhd8ed1ab_0    conda-forge
+notebook                  6.1.5            py37h89c1867_0    conda-forge
+numpy                     1.19.4                   pypi_0    pypi
+openssl                   1.1.1h               h7b6447c_0  
+packaging                 20.4               pyh9f0ad1d_0    conda-forge
+pandas                    1.1.4                    pypi_0    pypi
+pandoc                    2.11.2               h36c2ea0_0    conda-forge
+pandocfilters             1.4.2                      py_1    conda-forge
+pexpect                   4.8.0              pyh9f0ad1d_2    conda-forge
+pickleshare               0.7.5                   py_1003    conda-forge
+pip                       20.2.4           py37h06a4308_0  
+prometheus_client         0.9.0              pyhd3deb0d_0    conda-forge
+prompt_toolkit            1.0.15                     py_1    conda-forge
+ptyprocess                0.6.0                   py_1001    conda-forge
+pycparser                 2.20               pyh9f0ad1d_2    conda-forge
+pygments                  2.7.2                      py_0    conda-forge
+pyopenssl                 19.1.0                     py_1    conda-forge
+pyparsing                 2.4.7              pyh9f0ad1d_0    conda-forge
+pyrsistent                0.17.3           py37h4abf009_1    conda-forge
+pysocks                   1.7.1            py37he5f6b98_2    conda-forge
+python                    3.7.9                h7579374_0  
+python-dateutil           2.8.1                      py_0    conda-forge
+python_abi                3.7                     1_cp37m    conda-forge
+pytz                      2020.4                   pypi_0    pypi
+pyzmq                     20.0.0           py37h5a562af_1    conda-forge
+readline                  8.0                  h7b6447c_0  
+requests                  2.25.0             pyhd3deb0d_0    conda-forge
+send2trash                1.5.0                      py_0    conda-forge
+setuptools                50.3.1           py37h06a4308_1  
+simplegeneric             0.8.1                      py_1    conda-forge
+six                       1.15.0             pyh9f0ad1d_0    conda-forge
+sqlalchemy                1.3.20                   pypi_0    pypi
+sqlite                    3.33.0               h62c20be_0  
+terminado                 0.9.1            py37h89c1867_1    conda-forge
+testpath                  0.4.4                      py_0    conda-forge
+tk                        8.6.10               hbc83047_0  
+tornado                   6.1              py37h4abf009_0    conda-forge
+traitlets                 5.0.5                      py_0    conda-forge
+urllib3                   1.25.11                    py_0    conda-forge
+wcwidth                   0.2.5              pyh9f0ad1d_2    conda-forge
+webencodings              0.5.1                      py_1    conda-forge
+wheel                     0.35.1             pyhd3eb1b0_0  
+xz                        5.2.5                h7b6447c_0  
+zeromq                    4.3.3                h58526e2_3    conda-forge
+zipp                      3.4.0                      py_0    conda-forge
+zlib                      1.2.11               h7b6447c_3  
