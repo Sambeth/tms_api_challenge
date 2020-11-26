@@ -64,7 +64,6 @@ source <venv_name>/bin/activate
 
 ## Usage
 1. Create a config file in src/ directory or anywhere you want to put and put in the following details
-
 ```bash
 [db]
 user = <db user_name>
@@ -75,10 +74,18 @@ database_name = <db name>
 [api]
 key = <api_key>
 ```
+2. In the src/ directory, change the `configFilePath` variable assigment in `main.py` to your config file location
 
-2. In the src/ directory, change the `configFilePath` variable in `main.py` to your config file location
+3. In the same file, you could also change below endpoint variables to your preference
+```python
+prepare_data(engine,
+     start_date="2020-11-26",
+     zip_code="78701",
+     start_date_time="2020-11-26T12:00Z",
+     line_up_id="USA-TX42500-X"......)
+```
 
-3. Run `main.py`
+4. Run `main.py`
 
 ```bash
 python main.py
