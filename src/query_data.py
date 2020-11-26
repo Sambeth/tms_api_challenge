@@ -23,7 +23,7 @@ def combine_movie_list_based_on_genres(left_data, right_data):
     :param right_data: pd.DataFrame
     :return: pd.DataFrame
     """
-    combined_df = left_data.merge(right_data, how='left', on='genres', suffixes=('_on_tv', '_in_theatres'))
+    combined_df = left_data.merge(right_data, how='outer', on='genres', suffixes=('_on_tv', '_in_theatres'))
     combined_df["combined_movie_list"] = combined_df[['title_on_tv', 'title_in_theatres']].apply(
         lambda x: ','.join(x[x.notnull()]), axis=1)
 
