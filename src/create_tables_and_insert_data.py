@@ -74,8 +74,8 @@ def apply(engine, start_date, zip_code, start_date_time, line_up_id, api_key):
 
     try:
         # get movies data
-        in_theatres = get_movies_in_theatres(start_date, zip_code, api_key)
-        on_tv = get_movies_on_tv(start_date_time, line_up_id, api_key)
+        in_theatres = get_movies_in_theatres(start_date, zip_code, api_key).json()
+        on_tv = get_movies_on_tv(start_date_time, line_up_id, api_key).json()
 
         # creat empty list to store table objects for bulk data insert
         all_data_list = list()
