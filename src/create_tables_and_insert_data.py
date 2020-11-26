@@ -9,8 +9,12 @@ Base = declarative_base()
 
 
 def create_models(engine):
+    """
+    Create data models for movies data
+    :param engine:
+    :return: None
+    """
 
-    # creation of models in mysql db
     movies_in_theatres = Table(
         'movies_in_theatres', meta,
         Column('id', Integer, primary_key = True),
@@ -64,29 +68,35 @@ def apply(engine, start_date, zip_code, start_date_time, line_up_id, api_key):
 
     create_models(engine)
 
+    # create session
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    in_theatres = get_movies_in_theatres(start_date, zip_code, api_key)
-    on_tv = get_movies_on_tv(start_date_time, line_up_id, api_key)
+    try:
+        # get movies data
+        in_theatres = get_movies_in_theatres(start_date, zip_code, api_key)
+        on_tv = get_movies_on_tv(start_date_time, line_up_id, api_key)
 
-    all_data_list = list()
+        # creat empty list to store table objects for bulk data insert
+        all_data_list = list()
 
-    for data in in_theatres:
-        all_data_list.append(MoviesInTheatres(tms_id=data.get('tmsId', None),
-                                              title=data.get('title', None),
-                                              release_year=data.get('releaseYear', None),
-                                              genres=data.get('genres', None),
-                                              description=data.get('shortDescription', None),
-                                              theatres=data.get('showtimes', None)))
+        for data in in_theatres:
+            all_data_list.append(MoviesInTheatres(tms_id=data.get('tmsId', None),
+                                                  title=data.get('title', None),
+                                                  release_year=data.get('releaseYear', None),
+                                                  genres=data.get('genres', None),
+                                                  description=data.get('shortDescription', None),
+                                                  theatres=data.get('showtimes', None)))
 
-    for data in on_tv:
-        all_data_list.append(MoviesOnTv(tms_id=data['program'].get('tmsId', None),
-                                        title=data['program'].get('title', None),
-                                        release_year=data['program'].get('releaseYear', None),
-                                        genres=data['program'].get('genres', None),
-                                        description=data['program'].get('shortDescription', None),
-                                        channel=data['station'].get('channel', None)))
+        for data in on_tv:
+            all_data_list.append(MoviesOnTv(tms_id=data['program'].get('tmsId', None),
+                                            title=data['program'].get('title', None),
+                                            release_year=data['program'].get('releaseYear', None),
+                                            genres=data['program'].get('genres', None),
+                                            description=data['program'].get('shortDescription', None),
+                                            channel=data['station'].get('channel', None)))
 
-    session.add_all(all_data_list)
-    session.commit()
+        session.add_all(all_data_list)
+        session.commit()
+    except ValueError as e:
+        print(e)

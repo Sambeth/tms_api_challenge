@@ -15,12 +15,12 @@ def get_movies_in_theatres(start_date, zip_code, api_key):
     if r.status_code == 200:
         return r.json()
 
-    return r.status_code
+    raise ValueError(f"Could not fetch data from Movies in theatres endpoint with reason: {r.reason}, {r.status_code}")
 
 
 def get_movies_on_tv(start_date_time, line_up_id, api_key):
     """
-    Get movies airing on tv by a particular line up and start date time from API
+    Get movies airing on tv by a particular line up and start datetime from API
     """
 
     suffix_url = f"/airings?lineupId={line_up_id}&startDateTime={start_date_time}&api_key={api_key}"
@@ -30,4 +30,4 @@ def get_movies_on_tv(start_date_time, line_up_id, api_key):
     if r.status_code == 200:
         return r.json()
 
-    return r.status_code
+    raise ValueError(f"Could not fetch data from Movies on tv endpoint with reason: {r.reason}, {r.status_code}")

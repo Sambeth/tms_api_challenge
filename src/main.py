@@ -23,4 +23,4 @@ if __name__ == "__main__":
                  start_date_time="2020-11-26T12:00Z",
                  line_up_id="USA-TX42500-X",
                  api_key=api_key)
-    print(transform_and_query(engine))
+    transform_and_query(engine)
