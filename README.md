@@ -78,11 +78,10 @@ key = <api_key>
 
 3. In the same file, you could also change below endpoint variables to your preference
 ```python
-prepare_data(engine,
-     start_date="2020-11-26",
-     zip_code="78701",
-     start_date_time="2020-11-26T12:00Z",
-     line_up_id="USA-TX42500-X"......)
+ start_date = "2020-11-26"
+ zip_code = "78701"
+ start_date_time = "2020-11-26T12:00Z"
+ line_up_id = "USA-TX42500-X"
 ```
 
 4. Change directory to `/src` and run `pytest tests/endpoint_tests.py` in the terminal to make sure all test cases pass per your configuration
