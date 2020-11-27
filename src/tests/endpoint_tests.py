@@ -1,12 +1,7 @@
 import pytest
-from configparser import ConfigParser
-from get_data_from_api import get_movies_in_theatres, get_movies_on_tv
 
-config = ConfigParser()
-configFilePath = r'/home/sambeth/PycharmProjects/andela_exercise/src/credentials'
-config.read(configFilePath)
-
-api_key = config['api']['key']
+from ..base import api_key
+from ..get_data_from_api import get_movies_in_theatres, get_movies_on_tv
 
 
 def test_movies_in_theatres_by_zip_code_and_by_start_date_equals_200():

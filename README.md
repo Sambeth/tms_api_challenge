@@ -74,7 +74,7 @@ database_name = <db name>
 [api]
 key = <api_key>
 ```
-2. In the src/ directory, change the `configFilePath` variable assigment in `main.py` to your config file location
+2. In the src/ directory, change the `CONFIG_FILE_NAME` variable assigment in `base.py` to your config file name
 
 3. In the same file, you could also change below endpoint variables to your preference
 ```python
@@ -85,7 +85,9 @@ prepare_data(engine,
      line_up_id="USA-TX42500-X"......)
 ```
 
-4. Run `main.py`
+4. Change directory to `/src` and run `pytest tests/endpoint_tests.py` in the terminal to make sure all test cases pass per your configuration
+
+5. Run `main.py`
 
 ```bash
 python main.py

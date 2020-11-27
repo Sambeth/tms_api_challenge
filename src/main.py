@@ -1,19 +1,11 @@
+from sqlalchemy import create_engine
+
+from base import user, password, host, database_name, api_key
+from create_tables_and_insert_data import apply as prepare_data
+from query_data import apply as transform_and_query
+
+
 if __name__ == "__main__":
-    from sqlalchemy import create_engine
-    from configparser import ConfigParser
-
-    from create_tables_and_insert_data import apply as prepare_data
-    from query_data import apply as transform_and_query
-
-    config = ConfigParser()
-    configFilePath = r'/home/sambeth/PycharmProjects/andela_exercise/src/credentials'
-    config.read(configFilePath)
-
-    user = config['db']['user']
-    password = config['db']['password']
-    host = config['db']['host']
-    database_name = config['db']['database_name']
-    api_key = config['api']['key']
 
     engine = create_engine(f"mysql+mysqldb://{user}:{password}@{host}/{database_name}", echo=True)
 
