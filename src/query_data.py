@@ -51,12 +51,16 @@ def apply(engine):
         df_movies_in_theatres = pd.read_sql("select * from movies_in_theatres", db_connection)
         df_movies_on_tv = pd.read_sql("select * from movies_on_tv", db_connection)
 
-        movies_in_theatres = movies_grouped_by_genres(df_movies_in_theatres, groupby='genres')
-        movies_on_tv = movies_grouped_by_genres(df_movies_on_tv, groupby='genres')
+        if not df_movies_in_theatres.empty or not df_movies_on_tv.empty:
 
-        data = combine_movie_list_based_on_genres(movies_on_tv, movies_in_theatres)
+            movies_in_theatres = movies_grouped_by_genres(df_movies_in_theatres, groupby='genres')
+            movies_on_tv = movies_grouped_by_genres(df_movies_on_tv, groupby='genres')
 
-        return get_top_five_genres(data)
+            data = combine_movie_list_based_on_genres(movies_on_tv, movies_in_theatres)
+
+            return get_top_five_genres(data)
+        else:
+            raise SQLAlchemyError("Database tables are empty")
     except SQLAlchemyError as err:
         print(err)
     finally:
