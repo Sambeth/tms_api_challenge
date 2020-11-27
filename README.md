@@ -62,6 +62,23 @@ pip install -r requirements.txt
 source <venv_name>/bin/activate
 ```
 
+## Project Structure
+```
+.
+├── db_dump
+├── src
+│   └── tests
+│       └── endpoint_tests.yml # tests endpoints connection
+│   └── base.py # contains variables used in various scripts in the project
+│   └── create_tables_and_insert_data.py # main function to create table models and insert data from endpoint to database
+│   └── get_data_from_api.py # fetches data from endpoint to be inserted into table models by `create_tables_and_insert_data.py`
+│   └── main.py # runs the two main functions for the entire project
+│   └── query_data.py # query data from database using pandas to join the different data sets into memory and filter and return the data
+├── requirements.txt
+├── README.md
+├── .gitignore
+```
+
 ## Usage
 1. Create a config file in src/ directory or anywhere you want to put and put in the following details
 ```bash
